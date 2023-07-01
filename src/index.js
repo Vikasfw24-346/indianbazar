@@ -1,15 +1,53 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+//4. add ListItem 
+//import ReactDOM from 'react-dom/client';
+
+
+//1 or 3. We can use that as a boilerplate by using react code
+//import ReactDOM from 'react-dom/client';
+
+//2. smallest react element/alternet way some time jsx is not needed for development
+import ReactDOM from 'react-dom';
+
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './index.scss';
+//import ListItem from './components/ListItem';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+//4. add ListItem 
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>
+// );
+
+//or
+
+ReactDOM.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
+
+//2. smallest react element/alternet way some time jsx is not needed for development
+// const element =<h1>Vikas Tiwari</h1>
+
+// ReactDOM.render(
+//   element,
+//   document.getElementById('root')
+// );
+
+
+//1 or 3. We can use that as a boilerplate by using react code
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>
+// );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
