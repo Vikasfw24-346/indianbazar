@@ -1,20 +1,20 @@
-//1. Loader using React Portals - Working on Project
-import ReactDOM from "react-dom"
+import ReactDom from 'react-dom'
 
-export const Backdrop=props=>{
-    const handleClick=()=>{
-        if(props.onClose){
+export const Backdrop = props => {
+    const handleClick = () => {
+        if(props.onClose) {
             props.onClose();
         }
     }
-    return(
+
+    return (
         <div onClick={handleClick} className="loader-overlay"></div>
     )
 }
 
-const Loader =()=>{
+const Loader = () => {
     return (
-        ReactDOM.createPortal(
+        ReactDom.createPortal(
             <>
             <Backdrop/>
             <div className="loading-dots">
@@ -24,24 +24,9 @@ const Loader =()=>{
                 <div className="loading-dots--dot"></div>
             </div>
             </>,
-        document.getElementById("loader-root")
+            document.getElementById("loader-root")
         )
     )
 }
+
 export default Loader
-
-
-// const Loader =()=>{
-//     return (
-//         <>
-//         <div className="loader-overlay"></div>
-//         <div className="loading-dots">
-//         <div>Loading</div>
-//         <div className="loading-dots--dot"></div>
-//         <div className="loading-dots--dot"></div>
-//         <div className="loading-dots--dot"></div>
-//         </div>
-//         </>
-//     )
-// }
-// export default Loader
